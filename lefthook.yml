@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    standard:
+      tags: ruby style
+      glob: "*.rb"
+      run: standardrb {staged_files}
+  scripts:
+    "good_job.rb":
+      runner: ruby
+
