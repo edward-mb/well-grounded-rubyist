@@ -4,7 +4,7 @@ pre-commit:
     standard:
       tags: ruby style
       glob: "*.rb"
-      run: standardrb {staged_files}
+      run: standardrb {all_files}
   scripts:
     "good_job.rb":
       runner: ruby
