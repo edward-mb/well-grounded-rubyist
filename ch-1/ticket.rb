@@ -23,6 +23,12 @@ def ticket.price
   5.50
 end
 
+def ticket.print_details(*x)
+  x.each { |detail| puts "This ticket is #{detail}" }
+end
+
 puts "This ticket is for: #{ticket.event}, at #{ticket.venue}, \n on #{ticket.date}.
 The performer is #{ticket.performer}.
 The seat is #{ticket.seat}, and it costs $#{"%.2f." % ticket.price}"
+
+ticket.print_details("non-refundable", "non-transferable", "in a non-smoking section")
